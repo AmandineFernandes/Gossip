@@ -1,0 +1,2 @@
+module GossipsPageHelper
+end

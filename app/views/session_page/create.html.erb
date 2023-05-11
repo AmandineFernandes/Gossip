@@ -1,0 +1,26 @@
+<body data-turbo="false">
+<main class= "container">
+    <h1>Créer un compte</h1>
+    <br/><br/>
+
+<%= form_with model: @user do |form| %>
+<div class ="mb-3">
+<div class="col-sm-2">
+<%= form.label :email%>
+  <%= form.text_field :email, class: "form-control" %>
+</div>
+</div>
+    <br /> <br />
+
+<div class ="mb-3">
+<%= form.label :password%>
+  <%= form.password_field :password, class: "form-control" %>
+</div>
+    <br /><br />
+
+<div class ="mb-3">
+<%= form.submit "Créer", class: "btn btn-primary" %>
+</div>
+<% end %>
+</main>
+</body>

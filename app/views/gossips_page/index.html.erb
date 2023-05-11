@@ -1,0 +1,19 @@
+<body data-turbo="false">
+
+<h1>J'ai entendu dire ...</h1>
+<h6>Bienvenue dans le potin de tous les potins !</h6>
+
+<main class="container d-flex justify-content-center">
+<% @gossips.each do |gossip| %>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= gossip.title %></h5>
+         <p class="card-text"><%= gossip.content %></p>
+        <a href="gossips_page/new<%=gossip.id%>" class="btn btn-primary mb-0">Toujours plus</a>
+      </div>
+    </div>
+  </div>
+<% end %>
+</main>
+</body>

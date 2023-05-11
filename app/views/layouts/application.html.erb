@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thegossipproject</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+
+  <body data-turbo="false">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary" style="background-color: #330EFF;">
+    <a class="navbar-brand" href="<%= root_path %>">GOSSIP TRAIN </a>
+      <div class="container-fluid"> 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="<%= team_path %>">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<%= contact_path %>">Contact</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="<%= new_gossips_page_path %>">Gossip</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<%= new_session_page_path %>">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+    <%= yield %>
+  </body>
+</html>

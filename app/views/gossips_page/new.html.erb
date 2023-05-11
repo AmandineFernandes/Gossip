@@ -1,0 +1,28 @@
+<main class= "container">
+
+  <h1>C'est l'heure de casser du sucre</h1>
+  <br /> <br />
+
+  <%= form_tag url_for(action: 'create'), method: "post", authenticity_token: true do %>
+
+    <div class="col">
+      <%= label_tag 'titre' %>
+      <br />
+      <%= text_field_tag 'title' %>
+    </div>
+    <br /> <br />
+
+    <div class="col">
+      <%= label_tag 'contenu' %>
+      <br />
+      <%= text_area_tag 'content', '', class: 'form-control', id: 'floatingTextarea2', style: 'w-100px', placeholder: "Raconte-moi tout" %>
+    </div>
+    <br /> <br />
+
+    <div class="col">
+      <%= submit_tag "Créer le potin", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+    </form>
+</main>
+
